@@ -20,8 +20,7 @@
       <label class="form-label" for='name'>Assign a name to your task:</label>
       <input class="form-control" id='description' name='description' type='text' placeholder="Description Name" autofocus>
 
-      <label class="form-label" for='name'>Assign an id to your task:</label>
-      <input class="form-control" id='list_id' name='list_id' type='text' placeholder="list_id Name" autofocus>
+      <input id="list_id" name="list_id" type="hidden" value="<%= @list.id() %>">
 
       <button type="submit" class="button btn">Add task</button>
     </div>
@@ -35,5 +34,5 @@
 <a href="/">Home</a>
 <a href="/lists">View All Lists</a>
 <a href="/lists/new">Add New List</a>
-<a href="/lists/new">Add New Task</a>
+<!-- <a href="/lists/new">Add New Task</a> -->
 </div>

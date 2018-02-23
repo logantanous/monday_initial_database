@@ -44,7 +44,6 @@ describe('adding tasks to a list', {:type => :feature}) do
     test_list.save()
     visit("/lists/#{test_list.id()}")
     fill_in("description", {:with => "Learn SQL"})
-    fill_in("list_id", {:with => "#{test_list.id()}"})
     click_button("Add task")
     expect(page).to have_content("Success")
   end
