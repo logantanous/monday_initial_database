@@ -8,7 +8,8 @@ class Task
 
   def self.all
     # select * from tasks order by due_date desc;
-    returned_tasks = DB.exec("SELECT * FROM tasks ORDER BY due_date;")
+    # returned_tasks = DB.exec("SELECT * FROM tasks ORDER BY due_date;")
+    returned_tasks = DB.exec("SELECT * FROM tasks;")    
     tasks = []
     returned_tasks.each() do |task|
       description = task.fetch("description")

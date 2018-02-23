@@ -34,8 +34,10 @@ describe(Task) do
 
   describe("#==") do
     it("is the same task if it has the same description, list ID and due date") do
-      task1 = Task.new({:description => "learn SQL", :list_id => 1, :due_date => '2018-02-23'})
-      task2 = Task.new({:description => "learn SQL", :list_id => 1, :due_date => '2018-02-23'})
+      task1 = Task.new({:description => "learn SQL", :list_id => 1})
+      task2 = Task.new({:description => "learn SQL", :list_id => 1})
+      # task1 = Task.new({:description => "learn SQL", :list_id => 1, :due_date => '2018-02-23'})
+      # task2 = Task.new({:description => "learn SQL", :list_id => 1, :due_date => '2018-02-23'})
       expect(task1).to(eq(task2))
     end
   end
